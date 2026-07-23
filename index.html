@@ -9,45 +9,93 @@
 <body>
     <div class="overlay"></div>
 
+    <!-- NAVEGACIÓN SUPERIOR / MENÚ TÁCTICO -->
+    <nav class="navbar">
+        <div class="nav-logo">// HUGO BUSTOS</div>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
     <main class="container">
-        <!-- HEADER / PERFIL -->
+        <!-- HEADER / PERFIL PRINCIPAL -->
         <header class="terminal-card">
             <div class="status-bar">
                 <span class="status-dot"></span> SISTEMA ACTIVO // NODO: VALPARAÍSO, CL
             </div>
             <h1>HUGO BUSTOS FUENTES</h1>
             <h2>Analista en Ciberseguridad Jr. & Soporte Técnico</h2>
-            <p class="tagline">Especializado en SIEM, análisis de logs, respuesta a incidentes y gestión de infraestructura.</p>
-            
-            <div class="contact-links">
-                <a href="mailto:hugo.bustos.fuentes@gmail.com" class="btn">📧 Email</a>
-                <a href="https://linkedin.com/in/hugo-bustos-fuentes" target="_blank" class="btn">💼 LinkedIn</a>
-                <a href="https://github.com/Hugo-Bustos" target="_blank" class="btn">🐙 GitHub</a>
-            </div>
+            <p class="tagline">SOC Jr. / Help Desk N1 / Redes / Análisis de Logs & SIEM</p>
         </header>
 
-        <!-- RESUMEN / EXPEDIENTE -->
-        <section class="terminal-card">
-            <h3>// EXPEDIENTE PROFESIONAL</h3>
-            <p>Analista en Ciberseguridad en formación (IACC) con experiencia en análisis de logs y detección de alertas mediante SIEM, aplicación de la Tríada CIA, framework MITRE ATT&CK e identificación de IOCs. Base sólida en redes (TCP/IP, DNS, DHCP, VLANs) y administración de sistemas Linux/Windows. +9 años liderando equipos y resolviendo incidencias técnicas.</p>
+        <!-- SECCIÓN: SOBRE MÍ -->
+        <section id="sobre-mi" class="terminal-card">
+            <h3>// 01. SOBRE MÍ (EXPEDIENTE)</h3>
+            <p>Analista en Ciberseguridad en formación (IACC), certificado en TryHackMe y Cisco Networking Academy. Cuento con práctica <i>hands-on</i> en análisis de logs y detección de alertas mediante SIEM, aplicación de la Tríada CIA, framework MITRE ATT&CK e identificación de IOCs en entornos simulados.</p>
+            <p>Poseo una base sólida en redes (TCP/IP, DNS, DHCP, VLANs, Cisco Packet Tracer) y sistemas Windows/Linux a nivel de línea de comandos. Mis 9 años de experiencia liderando equipos y resolviendo incidencias técnicas para 500+ usuarios aportan una capacidad destacada para comunicar hallazgos de seguridad con claridad y capacitar a usuarios en buenas prácticas.</p>
         </section>
 
-        <!-- PROYECTOS / MISIONES -->
-        <section class="terminal-card">
-            <h3>// PROYECTOS TÉCNICOS</h3>
+        <!-- SECCIÓN: EDUCACIÓN Y CERTIFICACIONES -->
+        <section id="educacion" class="terminal-card">
+            <h3>// 02. EDUCACIÓN & CERTIFICACIONES</h3>
+            
+            <h4>Formación Académica</h4>
+            <div class="card-item">
+                <div class="item-header">
+                    <strong>Analista en Ciberseguridad</strong>
+                    <span class="date">Marzo 2025 - Presente</span>
+                </div>
+                <p>IACC - Instituto de Ciencias Aplicadas Online, Chile</p>
+            </div>
+            <div class="card-item" style="margin-top: 10px;">
+                <div class="item-header">
+                    <strong>Licenciado en Educación con mención en Historia</strong>
+                    <span class="date">2015 - 2019</span>
+                </div>
+                <p>Universidad de Valparaíso, Valparaíso, Chile</p>
+            </div>
+
+            <h4 style="margin-top: 25px;">Certificaciones Destacadas</h4>
+            <ul class="cert-list">
+                <li><strong>Cybersecurity 101</strong> | TryHackMe (2026)</li>
+                <li><strong>Pre Security Learning Path</strong> | TryHackMe (May 2026)</li>
+                <li><strong>Linux Unhatched</strong> | Cisco Networking Academy (May 2026)</li>
+                <li><strong>IT Support Essentials</strong> | Cisco Networking Academy (Abril 2026)</li>
+                <li><strong>Operating Systems Support</strong> | Cisco Networking Academy (2026)</li>
+                <li><strong>Gestión de Proyectos y Metodologías Ágiles</strong> | Santander Academy (2026)</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN: PROYECTOS TÉCNICOS -->
+        <section id="proyectos" class="terminal-card">
+            <h3>// 03. PROYECTOS TÉCNICOS</h3>
             <div class="grid">
                 <div class="card-item">
                     <h4>Análisis de Amenazas y SIEM</h4>
-                    <p>Análisis práctico de logs y detección de alertas en entornos simulados de operaciones de seguridad (SOC) en TryHackMe.</p>
+                    <p>Análisis práctico de logs y detección de alertas en entornos simulados (SOC) en TryHackMe Labs; aplicación del framework MITRE ATT&CK e identificación de IOCs.</p>
                 </div>
                 <div class="card-item">
                     <h4>Simulación de Redes</h4>
-                    <p>Diseño de topologías LAN/WAN, configuración de routers/switches, VLANs y DHCP en Cisco Packet Tracer.</p>
+                    <p>Diseño de topologías LAN/WAN, configuración de routers/switches, VLANs y DHCP en Cisco Packet Tracer con foco en resolución de conectividad.</p>
                 </div>
                 <div class="card-item">
                     <h4>Automatización con Python</h4>
-                    <p>Desarrollo de scripts para procesamiento de archivos (CSV/JSON) y automatización de tareas de soporte.</p>
+                    <p>Desarrollo de scripts para procesamiento de archivos (CSV/JSON) y automatización de tareas administrativas orientadas a soporte TI.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto" class="terminal-card">
+            <h3>// 04. CANALES DE CONTACTO</h3>
+            <p>Disponible para posiciones presenciales, híbridas o remotas (SOC Jr., Analista de Incidentes, Soporte TI con foco en seguridad).</p>
+            <div class="contact-links">
+                <a href="mailto:hugo.bustos.fuentes@gmail.com" class="btn">📧 Email Directo</a>
+                <a href="https://linkedin.com/in/hugo-bustos-fuentes" target="_blank" class="btn">💼 Perfil de LinkedIn</a>
+                <a href="https://github.com/Hugo-Bustos" target="_blank" class="btn">🐙 Repositorio GitHub</a>
             </div>
         </section>
     </main>
