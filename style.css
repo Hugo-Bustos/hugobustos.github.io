@@ -1,10 +1,14 @@
 :root {
     --bg-dark: #0a0e17;
-    --panel-bg: rgba(13, 20, 36, 0.85);
+    --panel-bg: rgba(13, 20, 36, 0.88);
     --cyan-neon: #00f0ff;
     --orange-hud: #ff6b00;
     --text-color: #d1e8ff;
     --border-color: rgba(0, 240, 255, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-/* Oscurecedor de pantalla */
+/* Capa oscura de fondo */
 .overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -24,15 +28,60 @@ body {
     z-index: 1;
 }
 
+/* Barra de navegación superior estilo Sci-Fi */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 14, 23, 0.95);
+    border-bottom: 1px solid var(--cyan-neon);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    box-sizing: border-box;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+    color: var(--cyan-neon);
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--cyan-neon);
+    text-shadow: 0 0 8px var(--cyan-neon);
+}
+
 .container {
     position: relative;
     z-index: 2;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 70px auto 0 auto;
     padding: 40px 20px;
 }
 
-/* Tarjetas tipo Interfaz Mass Effect / Glassmorphism */
+/* Tarjetas de contenido */
 .terminal-card {
     background: var(--panel-bg);
     border: 1px solid var(--border-color);
@@ -46,7 +95,8 @@ body {
 
 h1 { margin: 0; color: #fff; font-size: 2.2rem; letter-spacing: 2px; }
 h2 { color: var(--cyan-neon); font-size: 1.1rem; margin-top: 5px; font-weight: 400; }
-h3 { color: var(--orange-hud); margin-top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+h3 { color: var(--orange-hud); margin-top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; font-family: monospace; }
+h4 { color: #fff; margin-bottom: 8px; }
 
 .status-bar { font-size: 0.8rem; color: var(--cyan-neon); margin-bottom: 10px; font-family: monospace; }
 .status-dot { display: inline-block; width: 8px; height: 8px; background: #00ff66; border-radius: 50%; }
@@ -54,7 +104,7 @@ h3 { color: var(--orange-hud); margin-top: 0; border-bottom: 1px solid var(--bor
 .btn {
     display: inline-block;
     padding: 8px 16px;
-    margin: 10px 5px 0 0;
+    margin: 10px 10px 0 0;
     border: 1px solid var(--cyan-neon);
     color: var(--cyan-neon);
     text-decoration: none;
@@ -75,8 +125,29 @@ h3 { color: var(--orange-hud); margin-top: 0; border-bottom: 1px solid var(--bor
 }
 
 .card-item {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     padding: 15px;
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.date {
+    color: var(--cyan-neon);
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+.cert-list {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.cert-list li strong {
+    color: var(--cyan-neon);
 }
